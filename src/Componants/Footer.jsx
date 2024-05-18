@@ -17,6 +17,15 @@ function Footer() {
     const handlecontact=()=>{
         navigate('/enquiry')
     }
+    const handleregister =()=>{
+        const token=sessionStorage.getItem('token')
+        if(token){
+            alert("Already loggedin")
+        }
+        else{
+            navigate('/register')
+        }
+    }
     return (
         <>
 
@@ -36,7 +45,8 @@ function Footer() {
                         <a onClick={handleservices} className='ms-3 text-success' style={{ textDecoration: 'none' }} href="#pricing">Services</a>
                         <a onClick={handleReviews} className='ms-3 text-success' style={{ textDecoration: 'none' }} href="#pricing">Reviews</a>
                         <a onClick={handlecontact} className='ms-3 text-success' style={{ textDecoration: 'none' }} href="#pricing">Contact Us</a>
-                    
+                        <a onClick={handleregister} style={{ textDecoration: 'none' }} className='text-success ms-2 fs-6'>Register/Login</a>
+
                 </div>
                 <div className="col-lg-4 text-center border-bottom" style={{ lineHeight: '15px', fontSize: '15px', fontweight:'800' }}>
                     <h6 style={{ textDecoration: 'underline' }} className='text-success mt-2'>Contact Us</h6>

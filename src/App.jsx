@@ -7,6 +7,7 @@ import Authentication from './Pages/Authentication'
 import Treatments from './Pages/Treatments'
 import Enquiry from './Pages/Enquiry'
 import Reviews from './Pages/Reviews'
+import Admin from './Componants/Admin'
 
 function App() {
 
@@ -20,6 +21,8 @@ function App() {
         <Route path = '/treatments' element = {<Treatments/>}/>
         <Route path = '/reviews' element = {<Reviews/>}/>
         <Route path = '/enquiry' element = {<Enquiry/>}/>
+        <Route path = '/admin' element = {<Admin/>}/>
+
 
       </Routes>
 
